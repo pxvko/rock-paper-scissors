@@ -1,5 +1,5 @@
 function getComputerChoice () {
-    let computerNumber = Math.random();
+    const computerNumber = Math.random();
 
     if (computerNumber < 0.33) {
         console.log("Computer selected: rock");
@@ -16,7 +16,7 @@ function getComputerChoice () {
 // getComputerChoice();
 
 function getHumanChoice() {
-    let humanNumber = prompt("Select 1 for rock, 2 for paper, 3 for scissors","");
+    const humanNumber = prompt("Select 1 for rock, 2 for paper, 3 for scissors","");
 
     switch (humanNumber) {
         case "1": 
@@ -47,7 +47,7 @@ function playGame() {
     
     
     function playRound(humanChoice, computerChoice) {
-        if ((humanChoice === "rock" && computerChoice === "rock") || (humanChoice === "paper" && computerChoice === "paper") || humanChoice === "scissors" && computerChoice === "scissors") {
+        if (humanChoice === computerChoice) {
             console.log("Draw!");
             humanScore +=1;
             computerScore +=1;
